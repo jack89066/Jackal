@@ -22,3 +22,33 @@ result <- aaa[[1]]
 for(i in 2:9){
     result <- c(result,aaa[[i]])
 }
+
+testp <- round(runif(2634,-1,1))
+testp <- cumsum(testp)
+
+rs.result <- NULL
+for(i in 1:length(result)){
+    origin_data <- testp[result[[i]]]
+    m.adj_Y <- origin_data - mean(origin_data)
+    z_value <- cumsum(m.adj_Y)
+    r_value <- max(z_value) - min(z_value)
+    s_value <- sqrt((1/length(origin_data))*sum((m.adj_Y)^2))
+    rs.result[i] <- r_value/s_value
+}
+
+aaa_len <- NULL
+for(i in 1:length(aaa)){
+    aaa_len[i] <- length(aaa[[i]])
+}
+aaa_len_cum <- cumsum(aaa_len)
+
+rs.result.avg <- NULL
+for(i in 1:length(aaa)){
+    if(i == 1){
+       rs.result.avg[i] <- mean(rs.result[1:aaa_len_cum[i]]) 
+    }
+    else{
+        rs.result.avg[i] <- mean(rs.result[(aaa_len_cum[i-1]+1):aaa_len_cum[i]])
+    }
+}
+
