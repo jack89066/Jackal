@@ -4,3 +4,16 @@ aa <- NULL
 for(i in tt){
     aa[[log(i,2)]] <- a1[seq(1,257,i)]
 }
+aa <- c(list(a1),aa)
+
+aaa <- setNames(vector(length(aa), mode="list"), paste0('aa',c(1:9)))
+for(i in 1:length(aa)){
+    for(j in 2:length(aa[[i]])){
+        if(j != length(aa[[i]])){
+            aaa[[i]][[j-1]] <- aa[[i]][j-1]:(aa[[i]][j]-1) 
+        }
+        else{
+            aaa[[i]][[j-1]] <- aa[[i]][j-1]:aa[[i]][j]
+        }
+    }
+}
