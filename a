@@ -1,0 +1,45 @@
+lena <- 200
+a1 <- NULL
+a2 <- NULL
+a3 <- NULL
+a4 <- NULL
+a5 <- NULL
+a6 <- NULL
+a7 <- NULL
+for(i in 1:floor(log(lena,2))){
+    if(i==1){
+        a1[[1]] <- c(1:lena)
+    }
+    else{
+        a1[[i]] <- seq(1,slena)
+        a2[[i]] <- a1[[i-1]][-a1[[i]]]
+        a3[[i]] <- a2[[i-1]][-a2[[i]]]
+    }
+    slena <- round(length(a1[[i]])/2)
+}
+a1
+a2
+a3
+
+result <- NULL
+for(j in 1:7){
+    temp <- list(a1[[j]],a2[[j]],a3[[j]])
+    result <- c(result,temp)
+}
+result <- result[-which(sapply(result,is.null))]
+
+
+aa <- setNames(vector(floor(log(lena,2)), mode="list"), 
+            paste0('aa',c(1:floor(log(lena,2)))))
+for(i in 1:floor(log(lena,2))){
+    if(i==1){
+        aa[[1]] <- list(c(1:lena))
+    }
+    else{
+        aa[[1]][[i]] <- seq(1,slena)
+        for(j in 2:length(aa){
+            aa[[j]][[i]] <- aa[[j-1]][[i-1]][-aa[[j-1]][[i]]]
+        }
+    }
+    slena <- round(length(aa[[1]][[i]])/2)
+}
