@@ -17,3 +17,8 @@ for(i in 1:length(aa)){
         }
     }
 }
+
+result <- aaa[[1]]
+for(i in 2:9){
+    result <- c(result,aaa[[i]])
+}
