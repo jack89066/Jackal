@@ -1,0 +1,12 @@
+http://www.bearcave.com/misl/misl_tech/wavelets/hurst/index.html#HurstAndFinance
+
+I have had a hard time finding an intuitive definition for the term long memory process, so I'll give my definition: 
+a long memory process is a process with a random component, 
+where a past event has a decaying effect on future events. 
+The process has some memory of past events, which is "forgotten" as time moves forward. 
+For example, large trades in a market will move the market price 
+(e.g., a large purchase order will tend to move the price up, a large sell order will tend to move the price downward). 
+This effect is referred to as market impact (see The Market Impact Model by Nicolo Torre, BARRA Newsletter, Winter 1998). 
+When an order has measurable market impact, the market price does not immediately rebound to the previous price after the order is filled. 
+The market acts as if it has some "memory" of what took place and the effect of the order decays over time. 
+Similar processes allow momentum trading to have some value.
