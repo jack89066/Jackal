@@ -17,6 +17,9 @@ He invented a new statistical method -- the rescaled range analysis (R/S analysi
 which he described in detail in an interesting book, Long-Term Storage: An Experimental Study (Hurst et al., 1965).
 Fractals by Jens Feder, Plenum, 1988
 
+This method for estimating the Hurst exponent was developed and analyzed by Benoit Mandelbrot and his co-authors 
+in papers published between 1968 and 1979.
+
 
 One of the problems Hurst studied was the size of reservoir construction. 
 If a perfect reservoir is constructed, it will store enough water during the dry season so that it never runs out. 
