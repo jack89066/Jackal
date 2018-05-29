@@ -10,3 +10,15 @@ This effect is referred to as market impact (see The Market Impact Model by Nico
 When an order has measurable market impact, the market price does not immediately rebound to the previous price after the order is filled. 
 The market acts as if it has some "memory" of what took place and the effect of the order decays over time. 
 Similar processes allow momentum trading to have some value.
+
+
+Hurst spent a lifetime studying the Nile and the problems related to water storage. 
+He invented a new statistical method -- the rescaled range analysis (R/S analysis) -- 
+which he described in detail in an interesting book, Long-Term Storage: An Experimental Study (Hurst et al., 1965).
+Fractals by Jens Feder, Plenum, 1988
+
+
+One of the problems Hurst studied was the size of reservoir construction. 
+If a perfect reservoir is constructed, it will store enough water during the dry season so that it never runs out. 
+The amount of water that flows into and out of the reservoir is a random process. 
+In the case of inflow, the random process is driven by rainfall. In the case of outflow, the process is driven by demand for water.
